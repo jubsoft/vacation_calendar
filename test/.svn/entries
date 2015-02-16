@@ -1,0 +1,81 @@
+10
+
+dir
+28
+http://svn.casus.com.pl/redmine/Redmine/plugins/redmine_vacation_calendar/test
+http://svn.casus.com.pl/redmine
+
+
+
+2015-02-05T11:20:12.044752Z
+28
+piotr.zieba
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e693741e-af63-4fdf-ab56-6df28ef4260f
+
+
+
+
+
+
+0
+
+fixtures
+dir
+
+functional
+dir
+
+integration
+dir
+
+test_helper.rb
+file
+
+
+
+
+2015-02-02T13:35:22.000000Z
+91ccbd80f9b875dfde78cc25acfc5a37
+2015-02-05T11:20:12.044752Z
+28
+piotr.zieba
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+106
+
+unit
+dir
+

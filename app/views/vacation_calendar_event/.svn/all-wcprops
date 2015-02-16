@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/redmine/!svn/ver/29/Redmine/plugins/redmine_vacation_calendar/app/views/vacation_calendar_event
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/redmine/!svn/ver/31/Redmine/plugins/redmine_vacation_calendar/app/views/vacation_calendar_event/new.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/redmine/!svn/ver/31/Redmine/plugins/redmine_vacation_calendar/app/views/vacation_calendar_event/edit.html.erb
+END

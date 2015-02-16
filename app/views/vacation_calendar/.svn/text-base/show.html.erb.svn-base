@@ -1,0 +1,47 @@
+<%= stylesheet_link_tag('fullcalendar.css', :plugin => 'redmine_vacation_calendar') %>
+<%= javascript_include_tag('jquery.min.js', :plugin => 'redmine_vacation_calendar') %>
+<%= javascript_include_tag('moment.min.js', :plugin => 'redmine_vacation_calendar') %>
+<%= javascript_include_tag('fullcalendar.js', :plugin => 'redmine_vacation_calendar') %>
+<script>
+$(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+       	editable: false,
+       	slotEventOverlap: false,
+       	header: {
+			left: 'month,agendaWeek,agendaDay',
+			center: 'title',
+			right: 'today prev,next'
+			},
+       	monthNames: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'],
+    	monthNamesShort: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru'],
+    	dayNames: ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'],
+    	dayNamesShort: ['Nd', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'],
+    	buttonText: {
+	      today: 'Dziś',
+	      month: 'Miesiąc',
+	      week: 'Tydzień',
+	      day: 'Dzień'
+	    },
+       eventSources: [
+	        {
+	            url: 'get_events',
+	            data: {
+                	project_id: '<%= @project.id.to_s %>'
+            	},	
+	            error: function() {
+	            	alert('there was an error while fetching events!');
+	       		}
+	            
+	        }
+	  ]
+     
+    });
+
+});
+</script>
+<div id='calendar'></div>
+
+

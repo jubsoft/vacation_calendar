@@ -1,0 +1,77 @@
+<% form = form_for @project do |f| %>
+	<%= hidden_field_tag :tab, 'vacation_calendar' %>
+  	<%= hidden_field_tag 'project[vacation_calendar_id][]', '' %>
+	<% @vacationCalendar=VacationCalendar.find_by_project_id(@project.id) %>
+	<% if @vacationCalendar.nil? %>
+		<% @vacationCalendar= VacationCalendar.new({'project_id'=> @project.id})%>
+		<% @vacationCalendar.save %>
+	<% end %>
+	<div class="contextual">
+	<%= link_to l(:label_create_category_and_status), :controller => :vacation_calendar_event, :action => :new, :vacation_calendar_id=> @vacationCalendar.id %>
+	</div>
+<h2><%=l(:label_vacation_calendar_plural)%></h2>
+<h3><%=l(:label_vacation_calendar_events)%></h3>
+	<div class="autoscroll">
+  <% if @vacationCalendar.vacation_calendar_events.any? %>
+  <table class="vacation-calendar-events list">
+    <thead>
+    <tr>
+   	  <th><%=l(:label_vacation_calendar_event_id)%></th>
+      <th><%=l(:label_vacation_calendar_event_issue_category)%></th>
+      <th><%=l(:label_vacation_calendar_event_status)%></th>
+      <th><%=l(:label_vacation_calendar_event_color)%></th>
+      <th><%=l(:label_vacation_calendar_event_textColor)%></th>
+      <th style="width:10%;"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @vacationCalendar.vacation_calendar_events.each do |vacation_calendar_event| %>
+    <tr class="<%= cycle("odd", "even") %>">
+      <td class="id"><%= link_to(vacation_calendar_event.id, {controller:"vacation_calendar_event", action: "edit", vacation_calendar_event_id: vacation_calendar_event.id, project_id: @project.id}) %></td>
+      <td><%= IssueCategory.find(vacation_calendar_event.issue_category_id).name %></td>
+      <td><%= IssueStatus.find(vacation_calendar_event.status_id).name %></td>
+      <td><input disabled="disabled" id="vacation_calendar_event_color" name="vacation_calendar_event[color]" type="color" value="<%= vacation_calendar_event.color%>"/></td>
+     <td><input disabled="disabled" id="vacation_calendar_event_textColor" name="vacation_calendar_event[textColor]" type="color" value="<%= vacation_calendar_event.textColor%>"/></td>
+      <td class="buttons">
+        <%= link_to(l(:button_delete), vacation_calendar_event, :class => 'icon icon-del', :data => {:confirm => l(:text_are_you_sure)}, :confirm => l(:text_are_you_sure), :method => :delete) %>
+      </td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <% else %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% end %>
+</div>
+<div class="contextual">
+	<%= link_to l(:label_add_to_view_event), :controller => :vacation_calendar_view, :action => :new, :vacation_calendar_id=> @vacationCalendar.id %>
+	</div>
+	<h3><%=l(:label_vacation_calendar_views)%></h3>
+	<div class="autoscroll">
+  <% if @vacationCalendar.vacation_calendar_views.any? %>
+  <table class="vacation-calendar-views list">
+    <thead>
+    <tr>
+   	  <th><%=l(:label_vacation_calendar_view_id)%></th>
+      <th><%=l(:label_vacation_calendar_view_field_id)%></th>
+      <th style="width:10%;"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @vacationCalendar.vacation_calendar_views.each do |vacation_calendar_view| %>
+    <tr class="<%= cycle("odd", "view") %>">
+      <td class="id"><%= link_to(vacation_calendar_view.id, {controller:"vacation_calendar_view", action: "edit", vacation_calendar_view_id: vacation_calendar_view.id, project_id: @project.id}) %></td>
+      <td><%= vacation_calendar_view.field_id %></td>
+      <td class="buttons">
+        <%= link_to(l(:button_delete), vacation_calendar_view, :class => 'icon icon-del', :data => {:confirm => l(:text_are_you_sure)}, :confirm => l(:text_are_you_sure), :method => :delete) %>
+      </td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <% else %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% end %>
+</div>
+<%end %>
+<%= form if Redmine::VERSION::MAJOR >= 2 %>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/redmine/!svn/ver/28/Redmine/plugins/redmine_vacation_calendar/db/migrate
+END
+002_create_vacation_calendars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/redmine/!svn/ver/28/Redmine/plugins/redmine_vacation_calendar/db/migrate/002_create_vacation_calendars.rb
+END
+003_create_vacation_calendar_views.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/redmine/!svn/ver/29/Redmine/plugins/redmine_vacation_calendar/db/migrate/003_create_vacation_calendar_views.rb
+END
+004_create_vacation_calendar_events.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/redmine/!svn/ver/31/Redmine/plugins/redmine_vacation_calendar/db/migrate/004_create_vacation_calendar_events.rb
+END

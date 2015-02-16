@@ -1,0 +1,44 @@
+10
+
+dir
+28
+http://svn.casus.com.pl/redmine/Redmine/plugins/redmine_vacation_calendar/app/views
+http://svn.casus.com.pl/redmine
+
+
+
+2015-02-05T11:20:12.044752Z
+28
+piotr.zieba
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e693741e-af63-4fdf-ab56-6df28ef4260f
+
+
+
+
+
+
+0
+
+projects
+dir
+
+vacation_calendar
+dir
+
+vacation_calendar_event
+dir
+

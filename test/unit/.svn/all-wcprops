@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/redmine/!svn/ver/28/Redmine/plugins/redmine_vacation_calendar/test/unit
+END
+calendars_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/redmine/!svn/ver/28/Redmine/plugins/redmine_vacation_calendar/test/unit/calendars_test.rb
+END
+calendar_event_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/!svn/ver/28/Redmine/plugins/redmine_vacation_calendar/test/unit/calendar_event_test.rb
+END
+calendar_views_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/redmine/!svn/ver/28/Redmine/plugins/redmine_vacation_calendar/test/unit/calendar_views_test.rb
+END

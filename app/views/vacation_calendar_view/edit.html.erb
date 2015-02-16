@@ -1,0 +1,7 @@
+<h2><%=l(:label_vacation_calendar_view)%></h2>
+
+<%= form_for @vacation_calendar_view, url: {action: "update", vacation_calendar_view_id: @vacation_calendar_view.id }, html: {class: "nifty_form"} do |f| %>
+	<input id="vacation_calendar_view_vacation_calendar_id" name="vacation_calendar_view[vacation_calendar_id]" type="hidden" value="<%= @vacation_calendar_view.vacation_calendar_id%>") />
+	<p><%= f.select( :field_id, getIssueFieldsForView, {:required => true} )%></p>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,20 @@
+# English strings go here for Rails i18n
+pl:
+  # my_label: "My label"
+  label_manage_vacation_calendar: "Ustawianie kalendarza urlopowego"
+  label_manage_category_and_status: "Ustawienia colorów dla kategori i statusu"
+  label_create_category_and_status: "Utwórz nowy kolor dla kategori i statusu"
+  label_vacation_calendar_plural: "Kalendarz urlopowy"
+  label_vacation_calendar_new: "Nowy color dla kategori i statusu"
+  label_vacation_calendar_event_issue_category: "Kategoria zagadnienia"
+  label_vacation_calendar_event_status: "Status"
+  label_vacation_calendar_event_color: "Kolor"
+  label_vacation_calendar_event_textColor: "Kolor tekstu"
+  label_vacation_calendar_event_id: "Id"
+  label_vacation_calendar_edit: "Edytuj color dla kategori i statusu"
+  helpers:
+    submit:
+      vacation_calendar_event:
+        create: "Utwórz"
+        update: "Zapisz"  
+  

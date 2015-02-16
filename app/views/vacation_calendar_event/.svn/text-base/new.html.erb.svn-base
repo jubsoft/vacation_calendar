@@ -1,0 +1,10 @@
+<h2><%=l(:label_vacation_calendar_new)%></h2>
+
+<%= form_for @vacation_calendar_event, url: {action: "create" }, html: {class: "nifty_form"} do |f| %>
+	<input id="vacation_calendar_event_vacation_calendar_id" name="vacation_calendar_event[vacation_calendar_id]" type="hidden" value="<%= @vacation_calendar_event.vacation_calendar_id%>") />
+	<p><%= f.select( :issue_category_id, @vacation_calendar_event.vacation_calendar.project.issue_categories.collect {|t| [t.name, t.id]}, {:required => true} )%></p>
+	<p><%= f.select( :status_id, IssueStatus.all.collect {|t| [t.name, t.id]}, {:required => true} )%></p>
+	<p><input id="vacation_calendar_event_color" name="vacation_calendar_event[color]" type="color"/></p>
+	<p><input id="vacation_calendar_event_textColor" name="vacation_calendar_event[textColor]" type="color"/></p>
+  <%= f.submit  %>
+<% end %>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/redmine/!svn/ver/28/Redmine/plugins/redmine_vacation_calendar/lib
+END
+issue_category_patch.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/redmine/!svn/ver/31/Redmine/plugins/redmine_vacation_calendar/lib/issue_category_patch.rb
+END
+projects_helper_patch.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/redmine/!svn/ver/29/Redmine/plugins/redmine_vacation_calendar/lib/projects_helper_patch.rb
+END
+project_patch.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/redmine/!svn/ver/31/Redmine/plugins/redmine_vacation_calendar/lib/project_patch.rb
+END
+issue_status_patch.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/redmine/!svn/ver/31/Redmine/plugins/redmine_vacation_calendar/lib/issue_status_patch.rb
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/redmine/!svn/ver/28/Redmine/plugins/redmine_vacation_calendar/app/controllers
+END
+vacation_calendar_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/redmine/!svn/ver/32/Redmine/plugins/redmine_vacation_calendar/app/controllers/vacation_calendar_controller.rb
+END
+vacation_calendar_event_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/redmine/!svn/ver/29/Redmine/plugins/redmine_vacation_calendar/app/controllers/vacation_calendar_event_controller.rb
+END
