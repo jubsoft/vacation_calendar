@@ -1,0 +1,1 @@
+redmine_vacation_calendar
